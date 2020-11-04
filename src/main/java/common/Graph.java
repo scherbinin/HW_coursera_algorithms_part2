@@ -1,6 +1,6 @@
 package common;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 /*
 Simple Unweighted Graph
@@ -9,15 +9,15 @@ public class Graph {
     private final int v;
     private final boolean isDirected;
     private int e;
-    private final ArrayList<Integer>[] G;
+    private final LinkedList<Integer>[] G;
 
     public Graph(int VertexValue, boolean isDirected) {
         this.v = VertexValue;
         this.isDirected = isDirected;
-        this.G = new ArrayList[VertexValue];
+        this.G = new LinkedList[VertexValue];
 
         for (int i = 0; i< this.v; i++)
-            G[i] = new ArrayList<>();
+            G[i] = new LinkedList<>();
     }
 
     public void addEdge(int v1, int v2) {

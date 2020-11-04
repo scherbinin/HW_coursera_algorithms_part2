@@ -1,25 +1,35 @@
 package week1;
 
 import common.Graph;
+import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
-public class DFSTest {
+public class BreadthFirstSearchTest {
     private Graph connectedGraph;
     private Graph graphWhere2comp;
+    private BreadthFirstSearch bfs;
 
-    public DFSTest() {
+    @Before
+    public void setup() {
         connectedGraph = getConnectedGraph();
         graphWhere2comp = getGraphWhere2comp();
     }
 
     @Test
-    public void DFS_ConnectedGraph_AllVertexMarked() {
-        DFS dfs = new DFS(getConnectedGraph());
+    public void BFS_ConnectedGraph_AllVertexMarked() {
+        bfs = new BreadthFirstSearch(connectedGraph);
+        bfs.bfs(0);
+
+        Assert.assertTrue(bfs.isVisited(6));
     }
 
     @Test
-    public void DFS_NotConnectedGraphWhere2Components_AllVertexMarked() {
-        DFS dfs = new DFS(getGraphWhere2comp());
+    public void BFS_NotConnectedGraphWhere2Components_VertexFromAnotherCompNotFound() {
+        bfs = new BreadthFirstSearch(graphWhere2comp);
+        bfs.bfs(0);
+
+        Assert.assertFalse(bfs.isVisited(6));
     }
 
     private Graph getConnectedGraph() {
