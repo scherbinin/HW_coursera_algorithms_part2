@@ -31,7 +31,7 @@ public class SAP {
     }
 
     /**
-     * a common ancestor of v and w that participates in a shortest ancestral path; -1 if no such path
+     * a week1.common ancestor of v and w that participates in a shortest ancestral path; -1 if no such path
      */
     public int ancestor(int v, int w) {
         if (v < 0 || v >= g.V() || w < 0 || w >= g.V())
@@ -79,7 +79,7 @@ public class SAP {
     }
 
     /**
-     * a common ancestor that participates in shortest ancestral path; -1 if no such path
+     * a week1.common ancestor that participates in shortest ancestral path; -1 if no such path
      */
     public int ancestor(Iterable<Integer> v, Iterable<Integer> w) {
         if (v == null || w == null)

@@ -1,9 +1,11 @@
-package common;
+package week1.common;
+
+import edu.princeton.cs.algs4.EdgeWeightedGraph;
 
 import java.util.LinkedList;
 
 /*
-Simple Unweighted Graph
+Simple Unweighted EdgeWeightedGraph
  */
 public class Graph {
     private final int v;
@@ -15,7 +17,6 @@ public class Graph {
         this.v = VertexValue;
         this.isDirected = isDirected;
         this.G = new LinkedList[VertexValue];
-
         for (int i = 0; i< this.v; i++)
             G[i] = new LinkedList<>();
     }

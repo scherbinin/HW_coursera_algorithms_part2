@@ -1,6 +1,6 @@
 package week1;
 
-import common.Graph;
+import week1.common.Graph;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

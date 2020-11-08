@@ -1,6 +1,6 @@
 package week1;
 
-import common.Graph;
+import week1.common.Graph;
 
 import java.util.LinkedList;
 
