@@ -8,7 +8,7 @@ import java.util.List;
 public class Kraskul {
     public List<Edge> Kraskal(EdgeWeightedGraph graph) {
         UnionFind unionFind = new UnionFind(graph.V());
-        List<Edge> edges = new LinkedList<>();
+        List<Edge> edges = new LinkedList<>();// Or we can use minPQ
         List<Edge> res = new LinkedList<>();
 
         for(Edge edge : graph.edges())
